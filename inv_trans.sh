@@ -11,7 +11,6 @@ do
 
   x=inv_trans.$f90.x
   $f90 -o inv_trans.$f90.x -g -O0 inv_trans.F90
-  exit
   ./$x
 
 done

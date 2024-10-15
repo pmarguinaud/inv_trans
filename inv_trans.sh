@@ -9,8 +9,9 @@ for f90 in gfortran ifort pgf90
 do
   echo "==> $f90 <=="
 
-  $f90 -g -O0 inv_trans.F90
-  ./a.out 
+  x=inv_trans.$f90.x
+  $f90 -o $x -g -O0 inv_trans.F90
+  ./$x
 
 done
 
